@@ -12,7 +12,8 @@ class AppController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let vc = ImageProcessingVC(nibName: "ImageVC", bundle: <#NSBundle?#>)
+        
         // Do any additional setup after loading the view.
     }
 

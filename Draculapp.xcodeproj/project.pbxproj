@@ -13,6 +13,12 @@
 		4D475E8D1B9A72420021B51B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D475E8B1B9A72420021B51B /* LaunchScreen.xib */; };
 		4D475E991B9A72420021B51B /* DraculappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D475E981B9A72420021B51B /* DraculappTests.swift */; };
 		4D475EA51B9A74410021B51B /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D475EA41B9A74410021B51B /* AppController.swift */; };
+		BB53016B1B9A88F0005CC99E /* BallTrack.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB53015F1B9A88F0005CC99E /* BallTrack.mm */; };
+		BB53016C1B9A88F0005CC99E /* Global.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB5301611B9A88F0005CC99E /* Global.mm */; };
+		BB53016D1B9A88F0005CC99E /* ImageProcessingVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB5301631B9A88F0005CC99E /* ImageProcessingVC.mm */; };
+		BB53016E1B9A88F0005CC99E /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB5301651B9A88F0005CC99E /* ImageProcessor.mm */; };
+		BB53016F1B9A88F0005CC99E /* TestViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB5301671B9A88F0005CC99E /* TestViewController.mm */; };
+		BB5301701B9A88F0005CC99E /* VideoSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB53016A1B9A88F0005CC99E /* VideoSource.mm */; };
 		BB8E61AD1B9A79CF00526239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E61AC1B9A79CF00526239 /* CoreGraphics.framework */; };
 		BB8E61AF1B9A79D500526239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E61AE1B9A79D500526239 /* Foundation.framework */; };
 		BB8E61B11B9A79E000526239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E61B01B9A79E000526239 /* UIKit.framework */; };
@@ -24,11 +30,6 @@
 		BB8E61BD1B9A7A1400526239 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E61BC1B9A7A1400526239 /* QuartzCore.framework */; };
 		BB8E61BF1B9A7A1D00526239 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E61BE1B9A7A1D00526239 /* AssetsLibrary.framework */; };
 		BB8E61C11B9A7B3800526239 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E61C01B9A7B3800526239 /* opencv2.framework */; };
-		BB8E61CC1B9A7B4F00526239 /* TestViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB8E61C41B9A7B4F00526239 /* TestViewController.mm */; };
-		BB8E61CD1B9A7B4F00526239 /* VideoSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB8E61C61B9A7B4F00526239 /* VideoSource.mm */; };
-		BB8E61CE1B9A7B4F00526239 /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB8E61C91B9A7B4F00526239 /* ImageProcessor.mm */; };
-		BB8E61CF1B9A7B4F00526239 /* BallTrack.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB8E61CB1B9A7B4F00526239 /* BallTrack.mm */; };
-		BB8E61D31B9A7BCF00526239 /* Global.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB8E61D21B9A7BCF00526239 /* Global.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,19 @@
 		4D475E971B9A72420021B51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D475E981B9A72420021B51B /* DraculappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraculappTests.swift; sourceTree = "<group>"; };
 		4D475EA41B9A74410021B51B /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppController.swift; path = Draculapp/AppController.swift; sourceTree = "<group>"; };
+		BB53015E1B9A88F0005CC99E /* BallTrack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BallTrack.hpp; path = Draculapp/BallTrack.hpp; sourceTree = "<group>"; };
+		BB53015F1B9A88F0005CC99E /* BallTrack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BallTrack.mm; path = Draculapp/BallTrack.mm; sourceTree = "<group>"; };
+		BB5301601B9A88F0005CC99E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = Draculapp/Global.h; sourceTree = "<group>"; };
+		BB5301611B9A88F0005CC99E /* Global.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Global.mm; path = Draculapp/Global.mm; sourceTree = "<group>"; };
+		BB5301621B9A88F0005CC99E /* ImageProcessingVC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageProcessingVC.hpp; path = Draculapp/ImageProcessingVC.hpp; sourceTree = "<group>"; };
+		BB5301631B9A88F0005CC99E /* ImageProcessingVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageProcessingVC.mm; path = Draculapp/ImageProcessingVC.mm; sourceTree = "<group>"; };
+		BB5301641B9A88F0005CC99E /* ImageProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageProcessor.hpp; path = Draculapp/ImageProcessor.hpp; sourceTree = "<group>"; };
+		BB5301651B9A88F0005CC99E /* ImageProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageProcessor.mm; path = Draculapp/ImageProcessor.mm; sourceTree = "<group>"; };
+		BB5301661B9A88F0005CC99E /* TestViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestViewController.hpp; path = Draculapp/TestViewController.hpp; sourceTree = "<group>"; };
+		BB5301671B9A88F0005CC99E /* TestViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TestViewController.mm; path = Draculapp/TestViewController.mm; sourceTree = "<group>"; };
+		BB5301681B9A88F0005CC99E /* VideoFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VideoFrame.hpp; path = Draculapp/VideoFrame.hpp; sourceTree = "<group>"; };
+		BB5301691B9A88F0005CC99E /* VideoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoSource.h; path = Draculapp/VideoSource.h; sourceTree = "<group>"; };
+		BB53016A1B9A88F0005CC99E /* VideoSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VideoSource.mm; path = Draculapp/VideoSource.mm; sourceTree = "<group>"; };
 		BB8E61AC1B9A79CF00526239 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BB8E61AE1B9A79D500526239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB8E61B01B9A79E000526239 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -64,17 +78,6 @@
 		BB8E61BE1B9A7A1D00526239 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		BB8E61C01B9A7B3800526239 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		BB8E61C21B9A7B4D00526239 /* Draculapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Draculapp-Bridging-Header.h"; sourceTree = "<group>"; };
-		BB8E61C31B9A7B4F00526239 /* TestViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestViewController.hpp; sourceTree = "<group>"; };
-		BB8E61C41B9A7B4F00526239 /* TestViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestViewController.mm; sourceTree = "<group>"; };
-		BB8E61C51B9A7B4F00526239 /* VideoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSource.h; sourceTree = "<group>"; };
-		BB8E61C61B9A7B4F00526239 /* VideoSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoSource.mm; sourceTree = "<group>"; };
-		BB8E61C71B9A7B4F00526239 /* VideoFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VideoFrame.hpp; sourceTree = "<group>"; };
-		BB8E61C81B9A7B4F00526239 /* ImageProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImageProcessor.hpp; sourceTree = "<group>"; };
-		BB8E61C91B9A7B4F00526239 /* ImageProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessor.mm; sourceTree = "<group>"; };
-		BB8E61CA1B9A7B4F00526239 /* BallTrack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BallTrack.hpp; sourceTree = "<group>"; };
-		BB8E61CB1B9A7B4F00526239 /* BallTrack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BallTrack.mm; sourceTree = "<group>"; };
-		BB8E61D11B9A7BCF00526239 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		BB8E61D21B9A7BCF00526239 /* Global.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Global.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,17 +181,19 @@
 		BB8E61D01B9A7B5D00526239 /* OpenCV */ = {
 			isa = PBXGroup;
 			children = (
-				BB8E61C31B9A7B4F00526239 /* TestViewController.hpp */,
-				BB8E61C41B9A7B4F00526239 /* TestViewController.mm */,
-				BB8E61C51B9A7B4F00526239 /* VideoSource.h */,
-				BB8E61C61B9A7B4F00526239 /* VideoSource.mm */,
-				BB8E61C71B9A7B4F00526239 /* VideoFrame.hpp */,
-				BB8E61C81B9A7B4F00526239 /* ImageProcessor.hpp */,
-				BB8E61C91B9A7B4F00526239 /* ImageProcessor.mm */,
-				BB8E61CA1B9A7B4F00526239 /* BallTrack.hpp */,
-				BB8E61CB1B9A7B4F00526239 /* BallTrack.mm */,
-				BB8E61D11B9A7BCF00526239 /* Global.h */,
-				BB8E61D21B9A7BCF00526239 /* Global.mm */,
+				BB53015E1B9A88F0005CC99E /* BallTrack.hpp */,
+				BB53015F1B9A88F0005CC99E /* BallTrack.mm */,
+				BB5301601B9A88F0005CC99E /* Global.h */,
+				BB5301611B9A88F0005CC99E /* Global.mm */,
+				BB5301621B9A88F0005CC99E /* ImageProcessingVC.hpp */,
+				BB5301631B9A88F0005CC99E /* ImageProcessingVC.mm */,
+				BB5301641B9A88F0005CC99E /* ImageProcessor.hpp */,
+				BB5301651B9A88F0005CC99E /* ImageProcessor.mm */,
+				BB5301661B9A88F0005CC99E /* TestViewController.hpp */,
+				BB5301671B9A88F0005CC99E /* TestViewController.mm */,
+				BB5301681B9A88F0005CC99E /* VideoFrame.hpp */,
+				BB5301691B9A88F0005CC99E /* VideoSource.h */,
+				BB53016A1B9A88F0005CC99E /* VideoSource.mm */,
 			);
 			name = OpenCV;
 			sourceTree = "<group>";
@@ -293,14 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8E61CD1B9A7B4F00526239 /* VideoSource.mm in Sources */,
-				BB8E61CC1B9A7B4F00526239 /* TestViewController.mm in Sources */,
-				BB8E61D31B9A7BCF00526239 /* Global.mm in Sources */,
+				BB53016B1B9A88F0005CC99E /* BallTrack.mm in Sources */,
+				BB53016E1B9A88F0005CC99E /* ImageProcessor.mm in Sources */,
 				4D475E831B9A72420021B51B /* Draculapp.xcdatamodeld in Sources */,
 				4D475E801B9A72420021B51B /* AppDelegate.swift in Sources */,
-				BB8E61CE1B9A7B4F00526239 /* ImageProcessor.mm in Sources */,
+				BB53016F1B9A88F0005CC99E /* TestViewController.mm in Sources */,
+				BB53016D1B9A88F0005CC99E /* ImageProcessingVC.mm in Sources */,
+				BB53016C1B9A88F0005CC99E /* Global.mm in Sources */,
+				BB5301701B9A88F0005CC99E /* VideoSource.mm in Sources */,
 				4D475EA51B9A74410021B51B /* AppController.swift in Sources */,
-				BB8E61CF1B9A7B4F00526239 /* BallTrack.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
