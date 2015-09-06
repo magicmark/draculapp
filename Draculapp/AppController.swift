@@ -19,6 +19,8 @@ enum Page {
     case OpenCV
     case OpenCV2
     case Haematocrit
+    case HaemaSamples
+    case HaemaCV
 }
 
 
@@ -40,6 +42,7 @@ class AppController: UINavigationController {
         self.pushViewController(StartViewController.generate(delegate: self), animated: false)
         //pushViewController(HaematocritViewController.generate(delegate: self), animated: false)
         //pushViewController(opencv, animated: false)
+        //self.pushViewController(HemaSamplesViewController.generate(delegate: self), animated: false)
         super.viewDidLoad()
     }
 
@@ -67,7 +70,9 @@ extension AppController: Navigation {
         }
         
         if page == .Ratios {
-            self.setViewControllers([TakePictureViewController.generate(delegate: self, next: .Haematocrit)], animated: false)
+            //self.setViewControllers([TakePictureViewController.generate(delegate: self, next: .Haematocrit)], animated: false)
+            self.setViewControllers([HemaSamplesViewController.generate(delegate: self)], animated: false)
+
         }
         
         if page == .LiveCV{
@@ -78,9 +83,17 @@ extension AppController: Navigation {
             self.setViewControllers([HaematocritViewController.generate(delegate: self)], animated: false)
         }
         
+        if page == .HaemaSamples {
+            self.setViewControllers([HemaSamplesViewController.generate(delegate: self)], animated: false)
+        }
+        
         if page == .OpenCV2 {
             self.pushViewController(BloodShapeStartViewController.generate(delegate: self), animated: true)
-//            self.setViewControllers([BloodShapeStartViewController.generate(delegate: self)], animated: false)
+            //            self.setViewControllers([BloodShapeStartViewController.generate(delegate: self)], animated: false)
+        }
+        
+        if page == .HaemaCV {
+            self.pushViewController(HaemaCVViewController.generate(), animated: true)
         }
         
     }

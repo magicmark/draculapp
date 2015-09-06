@@ -216,7 +216,7 @@ void drawBox(cv::Mat img, cv::Rect roi){
     cv::Mat mask;
     cv::Mat origImg;
     cvUIImageToMat(image, origImg);
-
+    
     cvUIImageToMat(image, img);
     cvUIImageToMat(image, imgRedMask);
     cvUIImageToMat(image, mask);
@@ -229,30 +229,30 @@ void drawBox(cv::Mat img, cv::Rect roi){
     cv::flip(origImg, origImg, 1);
     
     cv::cvtColor(img, img, cv::COLOR_BGR2RGB);
-
+    
     // Yellow
     cv::inRange(img, cv::Scalar(15,80,85), cv::Scalar(40,255,255), mask);
-
+    
     vector<vector<cv::Point>> countours;
     cv::findContours(mask, countours, RETR_TREE, CHAIN_APPROX_SIMPLE);
-
+    
     int* response = findBiggestContour(countours, mask);
     int maxContour_id = response[0];
     double plasmaPercentage, redBloodPercentage;
     if (maxContour_id != -1) {
         
         cv::Rect rc = cv::boundingRect(countours[maxContour_id]);
-      
+        
         cv::Point p1 = cv::Point(rc.x + rc.width/2, rc.y + rc.height);
         cv::Point p2 = cv::Point(rc.x + rc.width/2, rc.y);
-
+        
         
         cv::Point q1 = cv::Point(rc.x + rc.width/2, rc.y + rc.height);
         cv::Point q2 = cv::Point(rc.x + rc.width/2, 325);
         
         cv::arrowedLine(origImg, p1, p2, cvScalar(0, 0, 255), 6);
         cv::arrowedLine(origImg, p2, p1, cvScalar(0, 0, 255), 6);
-
+        
         cv::arrowedLine(origImg, q1, q2, cvScalar(100, 100, 0), 6);
         cv::arrowedLine(origImg, q2, q1, cvScalar(100, 100, 0), 6);
         
@@ -260,29 +260,29 @@ void drawBox(cv::Mat img, cv::Rect roi){
         // Calculate total blood height
         int totalHeight = 325 - rc.y;
         std::cout << "totalHeight " << totalHeight << "\n";
-
+        
         int plasmaHeight = rc.height;
         std::cout << "plasmaHeight " << plasmaHeight << "\n";
-
+        
         int redBloodHeight = totalHeight - plasmaHeight;
         
         plasmaPercentage = ((double)plasmaHeight / totalHeight) * 100;
         redBloodPercentage = 100 - plasmaPercentage;
-
+        
         std::cout << "plasmaPercentage " << plasmaPercentage << "\n";
-
+        
         char buffer1 [10];
         char buffer2 [20];
-
+        
         int n = std::sprintf(buffer1, "%.2f%%", plasmaPercentage);
         int n1 = std::sprintf(buffer2, "%.2f%%", redBloodPercentage);
         
         cv::putText(origImg, buffer1, cv::Point(rc.x + rc.width / 2 + 15, rc.y + rc.height/2 + 10), cv::FONT_HERSHEY_DUPLEX, 1.0, cvScalar(0, 0, 255));
-
+        
         cv::putText(origImg, buffer2, cv::Point(rc.x + rc.width / 2 + 15, 325 - (redBloodHeight/2) - 10), cv::FONT_HERSHEY_DUPLEX, 1.0, cvScalar(100, 100, 0));
         
         
-    //        cv::line(origImg, cv::Point(0, 325), cv::Point(500, 325), cvScalar(10));
+        //        cv::line(origImg, cv::Point(0, 325), cv::Point(500, 325), cvScalar(10));
         
         
     }
@@ -297,7 +297,97 @@ void drawBox(cv::Mat img, cv::Rect roi){
     NSNumber *num2 = [NSNumber numberWithDouble:redBloodPercentage];
     NSArray* arr = @[result, num1, num2, [NSNull null]];
     return arr;
-   // return result;
+    // return result;
+}
+
++(NSArray *)isolateBloodForSamples:(UIImage *)image {
+    cv::Mat img;
+    cv::Mat imgRedMask;
+    cv::Mat mask;
+    cv::Mat origImg;
+    cvUIImageToMat(image, origImg);
+    
+    cvUIImageToMat(image, img);
+    cvUIImageToMat(image, imgRedMask);
+    cvUIImageToMat(image, mask);
+    
+    
+    cv::transpose(img, img);
+    cv::flip(img, img, 1);
+    
+    cv::transpose(origImg, origImg);
+    cv::flip(origImg, origImg, 1);
+    
+    cv::cvtColor(img, img, cv::COLOR_BGR2RGB);
+    
+    // Yellow
+    cv::inRange(img, cv::Scalar(15,80,85), cv::Scalar(40,255,255), mask);
+    
+    vector<vector<cv::Point>> countours;
+    cv::findContours(mask, countours, RETR_TREE, CHAIN_APPROX_SIMPLE);
+    
+    int* response = findBiggestContour(countours, mask);
+    int maxContour_id = response[0];
+    double plasmaPercentage, redBloodPercentage;
+    if (maxContour_id != -1) {
+        
+        cv::Rect rc = cv::boundingRect(countours[maxContour_id]);
+        
+        cv::Point p1 = cv::Point(rc.x + rc.width/2, rc.y + rc.height);
+        cv::Point p2 = cv::Point(rc.x + rc.width/2, rc.y);
+        
+        
+        cv::Point q1 = cv::Point(rc.x + rc.width/2, rc.y + rc.height);
+        cv::Point q2 = cv::Point(rc.x + rc.width/2, 325);
+        
+        cv::arrowedLine(origImg, p1, p2, cvScalar(0, 0, 255), 6);
+        cv::arrowedLine(origImg, p2, p1, cvScalar(0, 0, 255), 6);
+        
+        cv::arrowedLine(origImg, q1, q2, cvScalar(100, 100, 0), 6);
+        cv::arrowedLine(origImg, q2, q1, cvScalar(100, 100, 0), 6);
+        
+        
+        // Calculate total blood height
+        int totalHeight = 325 - rc.y;
+        std::cout << "totalHeight " << totalHeight << "\n";
+        
+        int plasmaHeight = rc.height;
+        std::cout << "plasmaHeight " << plasmaHeight << "\n";
+        
+        int redBloodHeight = totalHeight - plasmaHeight;
+        
+        plasmaPercentage = ((double)plasmaHeight / totalHeight) * 100;
+        redBloodPercentage = 100 - plasmaPercentage;
+        
+        std::cout << "plasmaPercentage " << plasmaPercentage << "\n";
+        
+        char buffer1 [10];
+        char buffer2 [20];
+        
+        int n = std::sprintf(buffer1, "%.2f%%", plasmaPercentage);
+        int n1 = std::sprintf(buffer2, "%.2f%%", redBloodPercentage);
+        
+        cv::putText(origImg, buffer1, cv::Point(rc.x + rc.width / 2 + 15, rc.y + rc.height/2 + 10), cv::FONT_HERSHEY_DUPLEX, 1.0, cvScalar(0, 0, 255));
+        
+        cv::putText(origImg, buffer2, cv::Point(rc.x + rc.width / 2 + 15, 325 - (redBloodHeight/2) - 10), cv::FONT_HERSHEY_DUPLEX, 1.0, cvScalar(100, 100, 0));
+        
+        
+        //        cv::line(origImg, cv::Point(0, 325), cv::Point(500, 325), cvScalar(10));
+        
+        
+    }
+    
+    UIImage *result = cvMatToUIImage(origImg);
+    
+    mask.release();
+    img.release();
+    origImg.release();
+    imgRedMask.release();
+    NSNumber *num1 = [NSNumber numberWithDouble:plasmaPercentage];
+    NSNumber *num2 = [NSNumber numberWithDouble:redBloodPercentage];
+    NSArray* arr = @[result, num1, num2, [NSNull null]];
+    return arr;
+    // return result;
 }
 
 @end

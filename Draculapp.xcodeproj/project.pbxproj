@@ -36,6 +36,10 @@
 		4DCD6AF41B9B361A00D3F287 /* TakePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD6AF21B9B361A00D3F287 /* TakePictureViewController.xib */; };
 		4DCD6AF71B9B467100D3F287 /* ConfirmImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD6AF51B9B467100D3F287 /* ConfirmImageViewController.swift */; };
 		4DCD6AF81B9B467100D3F287 /* ConfirmImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD6AF61B9B467100D3F287 /* ConfirmImageViewController.xib */; };
+		AD102FBC1B9BDA1E00B24AD1 /* HemaSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD102FBB1B9BDA1E00B24AD1 /* HemaSamplesViewController.swift */; };
+		AD102FC01B9BE31A00B24AD1 /* HemaSamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD102FBF1B9BE31A00B24AD1 /* HemaSamplesViewController.xib */; };
+		AD102FC21B9BE9B400B24AD1 /* HaemaCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD102FC11B9BE9B400B24AD1 /* HaemaCVViewController.swift */; };
+		AD102FC61B9BE9FA00B24AD1 /* HaemaCVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD102FC51B9BE9FA00B24AD1 /* HaemaCVViewController.xib */; };
 		BB2C5E531B9BAAB500EC60D4 /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB2C5E4A1B9BAAB500EC60D4 /* Panton-Black.otf */; };
 		BB2C5E541B9BAAB500EC60D4 /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB2C5E4B1B9BAAB500EC60D4 /* Panton-Bold.otf */; };
 		BB2C5E551B9BAAB500EC60D4 /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB2C5E4C1B9BAAB500EC60D4 /* Panton-ExtraBold.otf */; };
@@ -110,6 +114,10 @@
 		4DCD6AF61B9B467100D3F287 /* ConfirmImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmImageViewController.xib; sourceTree = "<group>"; };
 		5AE47FDC5CC6C986C2717B28 /* libPods-Draculapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Draculapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BAFA310A2E08408905D284 /* Pods-Draculapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draculapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Draculapp/Pods-Draculapp.release.xcconfig"; sourceTree = "<group>"; };
+		AD102FBB1B9BDA1E00B24AD1 /* HemaSamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HemaSamplesViewController.swift; sourceTree = "<group>"; };
+		AD102FBF1B9BE31A00B24AD1 /* HemaSamplesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HemaSamplesViewController.xib; sourceTree = "<group>"; };
+		AD102FC11B9BE9B400B24AD1 /* HaemaCVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaemaCVViewController.swift; sourceTree = "<group>"; };
+		AD102FC51B9BE9FA00B24AD1 /* HaemaCVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HaemaCVViewController.xib; sourceTree = "<group>"; };
 		B3E7E991688E3B298324075B /* Pods-Draculapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Draculapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Draculapp/Pods-Draculapp.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2C5E4A1B9BAAB500EC60D4 /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Black.otf"; sourceTree = "<group>"; };
 		BB2C5E4B1B9BAAB500EC60D4 /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Bold.otf"; sourceTree = "<group>"; };
@@ -288,6 +296,8 @@
 				4D29985E1B9AFB7600AE37FF /* BloodShapeStartViewController.xib */,
 				22F559491B9AFE50008F961C /* SelectRPMViewController.xib */,
 				22F5594A1B9AFE50008F961C /* CentrifugeViewController.xib */,
+				AD102FBF1B9BE31A00B24AD1 /* HemaSamplesViewController.xib */,
+				AD102FC51B9BE9FA00B24AD1 /* HaemaCVViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -304,6 +314,8 @@
 				4DCD6AF11B9B361A00D3F287 /* TakePictureViewController.swift */,
 				22F559501B9AFE8B008F961C /* SelectRPMViewController.swift */,
 				22F559521B9AFE97008F961C /* CentrifugeViewController.swift */,
+				AD102FBB1B9BDA1E00B24AD1 /* HemaSamplesViewController.swift */,
+				AD102FC11B9BE9B400B24AD1 /* HaemaCVViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -415,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD102FC61B9BE9FA00B24AD1 /* HaemaCVViewController.xib in Resources */,
 				BB2C5E561B9BAAB500EC60D4 /* Panton-ExtraLight.otf in Resources */,
 				BB2C5E571B9BAAB500EC60D4 /* Panton-Heavy.otf in Resources */,
 				BB2C5E541B9BAAB500EC60D4 /* Panton-Bold.otf in Resources */,
@@ -422,6 +435,7 @@
 				BB2C5E5A1B9BAAB500EC60D4 /* Panton-SemiBold.otf in Resources */,
 				BB2C5E531B9BAAB500EC60D4 /* Panton-Black.otf in Resources */,
 				22F5594C1B9AFE50008F961C /* CentrifugeViewController.xib in Resources */,
+				AD102FC01B9BE31A00B24AD1 /* HemaSamplesViewController.xib in Resources */,
 				4D475E8D1B9A72420021B51B /* LaunchScreen.xib in Resources */,
 				4D475EB41B9A90370021B51B /* OptionsViewController.xib in Resources */,
 				4DCD6AF01B9B02A200D3F287 /* HaematocritViewController.xib in Resources */,
@@ -498,6 +512,8 @@
 				4D475EA51B9A74410021B51B /* AppController.swift in Sources */,
 				22F559571B9B3638008F961C /* Sample.swift in Sources */,
 				BB46AA431B9AF63400AC765B /* BloodShapeStartViewController.swift in Sources */,
+				AD102FC21B9BE9B400B24AD1 /* HaemaCVViewController.swift in Sources */,
+				AD102FBC1B9BDA1E00B24AD1 /* HemaSamplesViewController.swift in Sources */,
 				4D475EB01B9A7FF50021B51B /* Color.swift in Sources */,
 				22F559551B9B3626008F961C /* SampleDataModel.swift in Sources */,
 				22F559511B9AFE8B008F961C /* SelectRPMViewController.swift in Sources */,
