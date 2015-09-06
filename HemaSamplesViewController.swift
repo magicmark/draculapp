@@ -37,8 +37,8 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
         collectionVC.collectionView  = UICollectionView(frame: CGRectMake(20, 20, 480, UIScreen.mainScreen().bounds.height - 40), collectionViewLayout: layout)
         collectionVC.collectionView?.backgroundColor = UIColor.clearColor()
         collectionVC.collectionView?.frame = CGRectMake(20, 60, self.view.frame.width-40, self.view.frame.height-140)
-        //        collectionVC.collectionView?.layer.borderColor = UIColor.blackColor().CGColor
-        //        collectionVC.collectionView?.layer.borderWidth = 1
+        //collectionVC.collectionView?.layer.borderColor = UIColor.blackColor().CGColor
+        //collectionVC.collectionView?.layer.borderWidth = 1
         collectionVC.collectionView?.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         collectionVC.collectionView?.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header")
         //        collectionVC.collectionView?.registerClass:UICollectionReusableView.self forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
@@ -101,15 +101,9 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
         
         switch indexPath.section{
         case 0:
-            HeaderLabel.text = "Normal Cells"
+            HeaderLabel.text = "Normal"
         case 1:
-            HeaderLabel.text = "Hereditary Elliptocytosis"
-        case 2:
-            HeaderLabel.text = "Sickle Cell"
-        case 3:
-            HeaderLabel.text = "Hemolytic Anemia"
-        case 4:
-            HeaderLabel.text = "High RWD"
+            HeaderLabel.text = "Leukemia"
         default:
             print("Default")
         }
@@ -129,13 +123,7 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
         case 0:
             switch indexPath.row{
             case 0:
-                imgV.image = UIImage(named: "Normal_1")
-            case 1:
-                imgV.image = UIImage(named: "Normal_2")
-            case 2:
-                imgV.image = UIImage(named: "Normal_3")
-            case 3:
-                imgV.image = UIImage(named: "Normal_4")
+                imgV.image = UIImage(named: "sample2")
             default:
                 print("default")
             }
@@ -144,34 +132,7 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
             case 0:
                 imgV.image = UIImage(named: "sample")
             case 1:
-                imgV.image = UIImage(named: "sample2")
-            default:
-                print("default")
-            }
-        case 2:
-            switch indexPath.row{
-            case 0:
-                imgV.image = UIImage(named: "SickleCell_1")
-            case 1:
-                imgV.image = UIImage(named: "SickleCell_2")
-            default:
-                print("default")
-            }
-        case 3:
-            switch indexPath.row{
-            case 0:
-                imgV.image = UIImage(named: "Hemolytic Anemia")
-            case 1:
-                imgV.image = UIImage(named: "SickleCell_2")
-            default:
-                print("default")
-            }
-        case 4:
-            switch indexPath.row{
-            case 0:
-                imgV.image = UIImage(named: "High RWD")
-            case 1:
-                imgV.image = UIImage(named: "SickleCell_2")
+                imgV.image = UIImage(named: "sample5")
             default:
                 print("default")
             }
@@ -189,15 +150,9 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
-            return 4
+            return 1
         case 1:
             return 2
-        case 2:
-            return 2
-        case 3:
-            return 1
-        case 4:
-            return 1
         default:
             return 0
         }
@@ -210,13 +165,7 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
         case 0:
             switch indexPath.row{
             case 0:
-                image = UIImage(named: "Normal_1")!
-            case 1:
-                image = UIImage(named: "Normal_2")!
-            case 2:
-                image = UIImage(named: "Normal_3")!
-            case 3:
-                image = UIImage(named: "Normal_4")!
+                image = UIImage(named: "sample2")!
             default:
                 print("default")
             }
@@ -225,50 +174,22 @@ class HemaSamplesViewController: UIViewController,UICollectionViewDataSource,UIC
             case 0:
                 image = UIImage(named: "sample")!
             case 1:
-                image = UIImage(named: "sample2")!
+                image = UIImage(named: "sample5")!
             default:
                 print("default")
             }
-        case 2:
-            switch indexPath.row{
-            case 0:
-                image = UIImage(named: "SickleCell_1")!
-            case 1:
-                image = UIImage(named: "SickleCell_2")!
-            default:
-                print("default")
-            }
-        case 3:
-            switch indexPath.row{
-            case 0:
-                image = UIImage(named: "Hemolytic Anemia")!
-            case 1:
-                image = UIImage(named: "SickleCell_2")!
-            default:
-                print("default")
-            }
-        case 4:
-            switch indexPath.row{
-            case 0:
-                image = UIImage(named: "High RWD")!
-            case 1:
-                image = UIImage(named: "SickleCell_2")!
-            default:
-                print("default")
-            }
-            
         default:
             print("Default")
         }
         
-        sharedSampleDataModel.lastMicroscopyImage = image
+        sharedSampleDataModel.ratiosImage = image
         
         delegate?.goToPage(.HaemaCV)
         
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 5
+        return 2
     }
     
     

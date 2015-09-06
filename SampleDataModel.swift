@@ -13,7 +13,7 @@ class SampleDataModel: NSObject {
    
 
     var lastMicroscopyImage:UIImage?
-
+    
     var ratiosImage: UIImage?
     
     func addSample(newSample: Sample) {
